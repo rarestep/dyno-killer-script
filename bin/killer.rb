@@ -11,7 +11,9 @@ killer = HerokuDynoKiller.new(
   {app_name: ENV["APP_NAME"], token: ENV["HEROKU_TOKEN"]},
   ENV["MEMORY_THRESHOLD_IN_MB"].to_f)
 
+$stdout = STDOUT
 $stdout.sync = true
+
 puts "this should go to the logs"
 puts killer.dynos_over_threshold
 
