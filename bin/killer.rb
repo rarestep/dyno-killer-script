@@ -3,7 +3,6 @@ require 'logger'
 
 Bundler.require
 
-$stdout.sync = true
 # logger = Logger.new(STDOUT)
 # logger.level = Logger::INFO
 
@@ -12,6 +11,7 @@ killer = HerokuDynoKiller.new(
   {app_name: ENV["APP_NAME"], token: ENV["HEROKU_TOKEN"]},
   ENV["MEMORY_THRESHOLD_IN_MB"].to_f)
 
+$stdout.sync = true
 puts "this should go to the logs"
 puts killer.dynos_over_threshold
 
