@@ -4,6 +4,7 @@ require 'logger'
 Bundler.require
 
 logger = Logger.new(STDOUT)
+logger.level = Logger::INFO
 
 killer = HerokuDynoKiller.new(
   {token: ENV["PAPERTRAIL_TOKEN"]},
