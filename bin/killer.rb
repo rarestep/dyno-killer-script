@@ -12,6 +12,7 @@ killer = HerokuDynoKiller.new(
   {app_name: ENV["APP_NAME"], token: ENV["HEROKU_TOKEN"]},
   ENV["MEMORY_THRESHOLD_IN_MB"].to_f)
 
+puts "this should go to the logs"
 logger.error killer.dynos_over_threshold
 
 # Restart all dynos that are over threshold. Returns dynos that were restarted.
