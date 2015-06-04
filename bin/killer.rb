@@ -4,8 +4,8 @@ require 'logger'
 Bundler.require
 
 $stdout.sync = true
-logger = Logger.new(STDOUT)
-logger.level = Logger::INFO
+# logger = Logger.new(STDOUT)
+# logger.level = Logger::INFO
 
 killer = HerokuDynoKiller.new(
   {token: ENV["PAPERTRAIL_TOKEN"]},
@@ -13,7 +13,7 @@ killer = HerokuDynoKiller.new(
   ENV["MEMORY_THRESHOLD_IN_MB"].to_f)
 
 puts "this should go to the logs"
-logger.error killer.dynos_over_threshold
+puts killer.dynos_over_threshold
 
 # Restart all dynos that are over threshold. Returns dynos that were restarted.
 # killer.restart
