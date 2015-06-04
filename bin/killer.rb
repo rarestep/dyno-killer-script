@@ -3,6 +3,7 @@ require 'logger'
 
 Bundler.require
 
+$stdout.sync = true
 logger = Logger.new(STDOUT)
 logger.level = Logger::INFO
 
