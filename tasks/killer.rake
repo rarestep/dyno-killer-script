@@ -7,7 +7,7 @@ namespace :dynos do
   end
 
   task :restart_over_threshold do
-    killer.dynos_over_threshold.each do |dyno|
+    killer.restart.each do |dyno|
       difference = dyno[:memory] - ENV["MEMORY_THRESHOLD_IN_MB"].to_f
       puts "Restarting (#{ENV["MEMORY_THRESHOLD_IN_MB"]}MB): #{dyno[:name]} with #{dyno[:memory]}MB (#{difference.round}MB)"
     end
