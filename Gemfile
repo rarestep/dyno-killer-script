@@ -5,4 +5,4 @@ ruby "2.2.2"
 gem "rake"
 
 # Rarestep's heroku dyno killer gem
-gem 'heroku_dyno_killer', git: "git://github.com/rarestep/heroku-dyno-killer.git", ref: "472a13f"
+gem 'heroku_dyno_killer', git: "git://github.com/rarestep/heroku-dyno-killer.git", ref: "f3cc442"
