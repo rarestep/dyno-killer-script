@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/rarestep/heroku-dyno-killer.git
-  revision: 3c74c4b3c73b316c309d660476dff5824088a192
-  ref: 3c74c4b3c73b316c309d660476dff5824088a192
+  revision: 472a13f19cd8764540c3f12f255af8a4ea1e2427
+  ref: 472a13f
   specs:
     heroku_dyno_killer (0.0.1)
       json
