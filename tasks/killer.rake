@@ -13,10 +13,10 @@ namespace :dynos do
   task :restart_over_threshold do
     killer.restart.each do |dyno|
       if dyno[:memory] == "R14"
-        puts "Restarting (#{ENV["MEMORY_THRESHOLD_IN_MB"]}MB): #{dyno[:name]} with #{dyno[:memory]}MB (#{difference.round}MB)"
+        puts "Restarting (#{ENV["MEMORY_THRESHOLD_IN_MB"]}MB): #{dyno[:name]} with #{dyno[:memory]}"
       else
         difference = dyno[:memory] - ENV["MEMORY_THRESHOLD_IN_MB"].to_f
-        puts "Restarting (#{ENV["MEMORY_THRESHOLD_IN_MB"]}MB): #{dyno[:name]} with #{dyno[:memory]}"
+        puts "Restarting (#{ENV["MEMORY_THRESHOLD_IN_MB"]}MB): #{dyno[:name]} with #{dyno[:memory]}MB (#{difference.round}MB)"
       end
     end
   end
