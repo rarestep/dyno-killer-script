@@ -21,6 +21,11 @@ namespace :dynos do
     end
   end
 
+  task :restart_web do
+    heroku = PlatformAPI.connect_oauth(ENV["HEROKU_TOKEN"])
+    heroku.dyno.restart(ENV['APP_NAME'], "web.")
+  end
+
   private
 
   def killer
