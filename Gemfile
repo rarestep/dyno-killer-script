@@ -11,3 +11,5 @@ gem 'json', '2.3.0'
 gem 'platform-api'
 
 gem 'rubocop', require: false
+
+gem 'dotenv', require: false
