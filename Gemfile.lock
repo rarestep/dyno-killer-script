@@ -6,7 +6,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.5)
     erubis (2.7.0)
-    excon (0.49.0)
+    excon (0.72.0)
     heroics (0.0.16)
       erubis (~> 2.0)
       excon
