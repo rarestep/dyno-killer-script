@@ -20,13 +20,13 @@ PAPERTRAIL_TOKEN
 
 2. Run one of the four rake tasks
 ```
-heroku run rake:dynos:list_over_memory_threshold
-heroku run rake:dynos:restart_over_memory_threshold
+[heroku run || dotenv] rake:dynos:list_over_memory_threshold
+[heroku run || dotenv] rake:dynos:restart_over_memory_threshold
 
 # or
 
-heroku run rake:dynos:list_over_load_threshold
-heroku run rake:dynos:restart_over_load_threshold
+[heroku run || dotenv] rake:dynos:list_over_load_threshold
+[heroku run || dotenv] rake:dynos:restart_over_load_threshold
 ```
 
 ## Details
