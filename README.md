@@ -13,7 +13,7 @@ It is currently running on heroku, https://dashboard.heroku.com/apps/fleetio-dyn
 ```
 APP_NAME
 HEROKU_TOKEN
-
+LOAD_1MIN_THRESHOLD
 MEMORY_THRESHOLD_IN_MB
 PAPERTRAIL_TOKEN
 ```
