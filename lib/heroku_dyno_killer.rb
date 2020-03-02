@@ -25,6 +25,17 @@ class HerokuDynoKiller
     restarts
   end
 
+  def restart_over_load_threshold
+    restarts = []
+
+    dynos_over_load_threshold.each do |dyno|
+      @heroku.restart(dyno[:name])
+      restarts.push dyno
+    end
+
+    restarts
+  end
+
   # Returns all dynos over threshold.
   def dynos_over_memory_threshold
     dynos_by_memory.select do |dyno|
